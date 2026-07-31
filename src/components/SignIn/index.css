@@ -1,0 +1,121 @@
+
+.sign-in-main-con {
+  min-height: 100vh;
+  background-image: url("https://nxtwave-website-media-files.s3.ap-south-1.amazonaws.com/placement-happenings/react++-images/signIn-page.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.sign-in-card {
+  width: 100%;
+  max-width: 360px;
+  background-color: #1f1f2e;
+  border: 1px solid #32324d;
+  border-radius: 12px;
+  padding: 40px 32px;
+}
+
+.sign-in-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sign-in-header img {
+  width: 60px;
+  margin-bottom: 16px;
+}
+
+.sign-in-head {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.sign-in-para {
+  color: #9ca3af;
+  font-size: 15px;
+}
+
+.sign-in-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-input,
+.password-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.email-input label,
+.password-input label {
+  color: #8b8b99;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.email-input input,
+.password-input input {
+  height: 44px;
+  border: 1px solid #44445a;
+  border-radius: 8px;
+  background-color: #111118;
+  color: #ffffff;
+  padding: 0 14px;
+  outline: none;
+  font-size: 15px;
+}
+
+.email-input input::placeholder,
+.password-input input::placeholder {
+  color: #ffffff;
+}
+
+.email-input input:focus,
+.password-input input:focus {
+  border-color: #f97316;
+}
+
+.sign-in-btn {
+  height: 46px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f97316;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.sign-in-btn:hover {
+  background-color: #ea580c;
+}
+
+.sign-in-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.sign-in-error-con {
+  margin-bottom: 16px;
+}
+
+.sign-in-error-message {
+  color: #ef4444;
+  font-size: 14px;
+  text-align: center;
+}
+
+.logo-icon {
+  font-size: 52px;
+  color: #d8c8ff;
+}
