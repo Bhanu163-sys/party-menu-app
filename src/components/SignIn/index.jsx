@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {useNavigate} from 'react-router-dom';
+import {replace, useNavigate} from 'react-router-dom';
 import { Navigate } from 'react';
 import {useAuth} from '../../context/AuthContext'
 import {GiKnifeFork} from 'react-icons/gi'
@@ -14,6 +14,7 @@ const SignIn = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const {login} = useAuth()
+  const {isAuthenticated} = useAuth()
 
   const onSubmitSuccess = data => {
     login(data.token, data.user)
@@ -69,10 +70,9 @@ const SignIn = () => {
     }
     
   }
-  
-  const token = localStorage.getItem('party_menu_token');
-  if (token !== null) {
-    return <Navigate to="/" replace />;
+
+  if (isAuthenticated){
+    navigate('/' , {replace: 'true'})
   }
   
   return(
@@ -83,9 +83,7 @@ const SignIn = () => {
                 <h1 className='sign-in-head'>Party Menu</h1>
                 <p className='sign-in-para'>Sign in to explore our delicious menu</p>
             </div>
-            <div className='sign-in-error-con'>
-                {showSubmitError && <p className='sign-in-error-message'>{error}</p>}
-            </div>
+            {showSubmitError && <div className='error-msg-con'><p className='sign-in-error-message'>{error}</p></div>}
             <form onSubmit={onSubmitForm} className='sign-in-form'>
                 <div className='email-input'>
                     <label htmlFor="email">Email</label>

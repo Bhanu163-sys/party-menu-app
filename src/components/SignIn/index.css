@@ -119,3 +119,11 @@
   font-size: 52px;
   color: #d8c8ff;
 }
+
+.error-msg-con {
+  background-color: rgba(127, 29, 29, 0.35);
+  border: 1px solid #ef4444;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 18px;
+}

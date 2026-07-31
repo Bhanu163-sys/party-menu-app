@@ -1,0 +1,76 @@
+.food-card-item {
+  list-style-type: none;
+}
+
+.food-card-link {
+  text-decoration: none;
+}
+
+.card-con {
+  height: 360px;
+  width: 270px;
+  overflow: hidden;
+  background-color: #1b1d29;
+  border-radius: 16px;
+  border: 1px solid #303245;
+  height: auto;
+}
+
+.image-con {
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 163px;
+  object-fit: cover;
+}
+
+.veg-badge,
+.non-veg-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.veg-badge {
+  background-color: #2e8b57;
+}
+
+.non-veg-badge {
+  background-color: #b91c1c;
+}
+
+.card-details {
+  padding: 10px;
+  text-align: left;
+}
+
+.category-para {
+  color: #f97316;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.food-name {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 9px;
+}
+
+.food-description {
+  color: #9ca3af;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.servings {
+  color: #9ca3af;
+  font-size: 12px;
+}
