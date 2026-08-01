@@ -1,15 +1,25 @@
-import { Link } from "react-router-dom";
+import { Link, useParams, useNavigate, Navigate } from "react-router-dom";
 import { FaLongArrowAltLeft } from "react-icons/fa";
+
+import menuData from "../../data/menuData";
 import './index.css'
 
-const FoodDetailsCard = props => {
-    const { foodDetails } = props
+const FoodDetailsCard = () => {
+    const { id } = useParams();
+    const navigate = useNavigate();
+
+    const foodDetails = menuData.find((item) => item.id === parseInt(id));
+
+    if (!foodDetails) {
+        return <Navigate to="/" replace />;
+    }
+
     const {name, image, category, isVeg, fullDescription, ingredients, servings} = foodDetails
     return (
         <li className="list-details-item">
             <div className="food-details-header-con">
                 <Link className="details-link-item" to="/">
-                    <button type="button" className="back-btn">
+                    <button type="button" className="back-btn" onClick={() => navigate(-1)}>
                         <FaLongArrowAltLeft className="arrow-icon" /> 
                         <span className="back-btn-para">Back to Menu</span>
                     </button>

@@ -1,0 +1,49 @@
+.food-item-grid {
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 40px 0 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.no-results-container {
+  width: 100%;
+  margin-top: 60px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.no-results-heading {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.no-results-text {
+  color: #9ca3af;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .food-item-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .food-item-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .no-results-heading {
+    font-size: 22px;
+  }
+
+  .no-results-text {
+    font-size: 14px;
+  }
+}

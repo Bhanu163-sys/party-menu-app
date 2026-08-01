@@ -6,3 +6,157 @@
   align-items: center;
   padding: 30px 20px;
 }
+
+.home-con {
+  min-height: 100vh;
+  background-color: #0b0b12;
+  color: #ffffff;
+  padding: 30px 80px;
+}
+
+.filters-con {
+  margin-top: 40px;
+}
+
+.category-heading,
+.diet-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.diet-main-con {
+  margin-top: 40px;
+}
+
+.diets-list-con {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.diet-list-ele {
+  padding: 10px 24px;
+  border: 1px solid #34344a;
+  border-radius: 999px;
+  background-color: #17171f;
+  color: #c8c8d0;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.diet-list-ele:hover {
+  background-color: #242433;
+  color: #ffffff;
+}
+
+.active-diet {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+  .home-con {
+    padding: 24px;
+  }
+
+  .category-heading,
+  .diet-heading {
+    font-size: 24px;
+  }
+
+  .diets-list-con {
+    gap: 12px;
+  }
+
+  .diet-list-ele {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 576px) {
+  .home-con {
+    padding: 16px;
+  }
+
+  .category-heading,
+  .diet-heading {
+    font-size: 22px;
+  }
+
+  .diets-list-con {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    padding-bottom: 8px;
+  }
+
+  .diets-list-con::-webkit-scrollbar {
+    display: none;
+  }
+
+  .diet-list-ele {
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+.input-con {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-input {
+  width: 350px;
+  height: 46px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid #34344a;
+  background-color: #17171f;
+  color: #ffffff;
+  outline: none;
+  font-size: 15px;
+}
+
+.search-input::placeholder {
+  color: #8f93a6;
+}
+
+.search-input:focus {
+  border-color: #f97316;
+}
+
+.search-btn {
+  height: 46px;
+  padding: 0 26px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f97316;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background-color: #ea580c;
+}
