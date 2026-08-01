@@ -1,21 +1,20 @@
 .list-details-item {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 40px 20px 60px;
-  list-style-type: none;
+  padding: 40px 24px 60px;
+  list-style: none;
   color: #ffffff;
 }
 
-/* Header */
+/* ---------- Header ---------- */
 
 .food-details-header-con {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
   gap: 20px;
-  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .details-link-item,
@@ -27,17 +26,22 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: transparent;
+
+  padding: 11px 18px;
+
   border: 1px solid #34344a;
-  color: #d4d4d8;
-  padding: 10px 18px;
   border-radius: 10px;
+
+  background: transparent;
+  color: #d4d4d8;
+
   cursor: pointer;
-  transition: 0.3s;
+
+  transition: all .3s ease;
 }
 
 .back-btn:hover {
-  background: #1f1f2e;
+  background: #202030;
 }
 
 .arrow-icon {
@@ -51,123 +55,168 @@
 
 .saved-recipes-con {
   display: flex;
-  gap: 16px;
+  gap: 14px;
+  align-items: center;
 }
-
 
 .saved-recipes-btn {
   padding: 11px 22px;
+
   border-radius: 10px;
+
+  border: 1px solid #34344a;
+
   background: transparent;
   color: #d4d4d8;
-  border: 1px solid #34344a;
+
   cursor: pointer;
+
   transition: .3s;
 }
 
 .saved-recipes-btn:hover {
-  background: #1f1f2e;
+  background: #202030;
+}
+
+/* ---------- Save Button ---------- */
+
+.save-btn,
+.saved-btn {
+  padding: 12px 24px;
+
+  border: none;
+  border-radius: 10px;
+
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .3s;
 }
 
 .save-btn {
-  background-color: #ff7a00;
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  background: #ff7a00;
 }
 
 .save-btn:hover {
-  background-color: #e56f00;
+  background: #e56f00;
 }
 
 .saved-btn {
-  background-color: #16a34a;
+  background: #16a34a;
 }
 
 .saved-btn:hover {
-  background-color: #15803d;
+  background: #15803d;
 }
+
+/* ---------- Content ---------- */
+
 .image-description-para {
   display: flex;
-  gap: 40px;
+  gap: 48px;
   align-items: flex-start;
-  margin-bottom: 40px;
+
+  margin-bottom: 50px;
 }
 
 .food-details-image {
-  width: 380px;
-  height: 260px;
+  width: 420px;
+  height: 300px;
+
   object-fit: cover;
+
   border-radius: 18px;
+
+  flex-shrink: 0;
 }
 
 .food-details-con {
   flex: 1;
-  text-align: left;
 }
 
 .category-con {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
+
   margin-bottom: 20px;
 }
 
 .category-span {
   padding: 6px 14px;
+
   border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
+
   background: #4a2c17;
   color: #ffb366;
+
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .category-span.veg {
-  background: #1f5132;
-  color: #72e28d;
+  background: #214d34;
+  color: #6ef29d;
 }
 
 .category-span.non-veg {
-  background: #5c1f1f;
-  color: #ff8787;
+  background: #5d2020;
+  color: #ff9b9b;
 }
 
 .food-details-name {
+  margin: 0 0 12px;
+
   font-size: 42px;
   font-weight: 700;
-  margin-bottom: 12px;
+
+  line-height: 1.2;
 }
 
 .servings-para {
-  color: #9ca3af;
   margin-bottom: 20px;
+
+  color: #9ca3af;
+
   font-size: 18px;
 }
 
 .food-details-description {
+  max-width: 100%;
+
   color: #b5b7c5;
+
   line-height: 1.8;
-  max-width: 500px;
+
+  font-size: 16px;
 }
+
+/* ---------- Ingredients ---------- */
 
 .ingredients-con {
   background: #1b1b28;
+
   border: 1px solid #2c2c3c;
+
   border-radius: 18px;
-  padding: 28px;
+
+  padding: 30px;
 }
 
 .ingredients-heading {
-  font-size: 30px;
+  margin-top: 0;
   margin-bottom: 24px;
+
+  font-size: 30px;
 }
 
 .ingredients-list {
   list-style: none;
+
   padding: 0;
   margin: 0;
 }
@@ -176,11 +225,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 18px 22px;
+
   margin-bottom: 14px;
+
   border: 1px solid #323246;
   border-radius: 12px;
+
   background: #111118;
+}
+
+.ingredient-item:last-child {
+  margin-bottom: 0;
 }
 
 .ingredient-item p {
@@ -196,60 +253,119 @@
   color: #9ca3af;
 }
 
+/* ================= TABLET ================= */
 
 @media screen and (max-width: 992px) {
+
   .image-description-para {
     flex-direction: column;
+    gap: 30px;
   }
 
   .food-details-image {
     width: 100%;
-    max-width: 550px;
-    height: auto;
+    height: 350px;
   }
 
   .food-details-name {
-    font-size: 34px;
+    font-size: 36px;
   }
+
 }
 
-/* Mobile */
+/* ================= MOBILE ================= */
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
+
   .list-details-item {
-    padding: 20px 16px 40px;
+    padding: 24px 18px 40px;
   }
 
   .food-details-header-con {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    gap: 18px;
   }
 
   .saved-recipes-con {
     width: 100%;
-    justify-content: space-between;
+    display: flex;
+    gap: 12px;
   }
 
   .saved-recipes-btn,
-  .toggle-save-btn {
+  .save-btn,
+  .saved-btn {
     flex: 1;
   }
 
+  .food-details-image {
+    width: 100%;
+    height: 260px;
+  }
+
   .food-details-name {
-    font-size: 28px;
+    font-size: 30px;
+  }
+
+  .servings-para {
+    font-size: 16px;
+  }
+
+  .food-details-description {
+    font-size: 15px;
   }
 
   .ingredients-con {
-    padding: 18px;
+    padding: 22px;
+  }
+
+  .ingredients-heading {
+    font-size: 26px;
+  }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media screen and (max-width: 480px) {
+
+  .food-details-image {
+    height: 210px;
+  }
+
+  .food-details-name {
+    font-size: 26px;
+  }
+
+  .category-span {
+    font-size: 12px;
+  }
+
+  .saved-recipes-con {
+    flex-direction: column;
+  }
+
+  .saved-recipes-btn,
+  .save-btn,
+  .saved-btn {
+    width: 100%;
   }
 
   .ingredient-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+
     padding: 14px;
+  }
+
+  .ingredient-item p {
     font-size: 14px;
   }
 
   .ingredients-heading {
     font-size: 24px;
   }
-}
 
+}
