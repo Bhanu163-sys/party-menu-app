@@ -1,7 +1,7 @@
 import Header from "../Header";
 import {useAuth} from '../../context/AuthContext'
 import {Navigate} from 'react-router-dom'
-import FoodCard  from "../FoodCard";
+import FoodDetailsCard from "../FoodDetailsCard";
 
 import './index.css'
 
@@ -37,9 +37,7 @@ const Home = () =>{
     return(
             <div className="home-con">
                 <Header />
-
-                <FoodCard cardDetails={sampleCard} />
-                
+                <FoodDetailsCard foodDetails={sampleCard} />
             </div>
         )
 }
