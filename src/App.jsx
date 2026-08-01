@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Home from './components/Home'
 import SignIn from './components/SignIn'
 import FoodDetailsCard from './components/FoodDetailsCard'
+import SavedRecipes from './components/SavedRecipes'
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/menu/:id" element={<FoodDetailsCard />} />
+        <Route path="/saved-recipes" element={<SavedRecipes />} />
       </Routes>
     </BrowserRouter>
   )

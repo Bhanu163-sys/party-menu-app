@@ -1,5 +1,6 @@
 import { Link, useParams, useNavigate, Navigate } from "react-router-dom";
 import { FaLongArrowAltLeft } from "react-icons/fa";
+import {useSaveRecipe} from '../../context/SaveRecipeContext'
 
 import menuData from "../../data/menuData";
 import './index.css'
@@ -7,6 +8,11 @@ import './index.css'
 const FoodDetailsCard = () => {
     const { id } = useParams();
     const navigate = useNavigate();
+    const {
+        savedRecipes,
+        isRecipeSaved,
+        toggleSaveRecipe,
+    } = useSaveRecipe()
 
     const foodDetails = menuData.find((item) => item.id === parseInt(id));
 
@@ -30,8 +36,14 @@ const FoodDetailsCard = () => {
                         Saved Recipes
                       </button>
                     </Link>
-                    <button type="button" className="toggle-save-btn">
-                        Save Recipe
+                    <button
+                      type="button"
+                      className="toggle-save-btn"
+                      onClick={() => toggleSaveRecipe(foodDetails)}
+                      >
+                      {isRecipeSaved(foodDetails.id)
+                        ? '✓ Saved'
+                        : 'Save Recipe'}
                     </button>
                 </div>
             </div>
