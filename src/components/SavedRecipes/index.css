@@ -1,7 +1,6 @@
 .saved-recipes-page {
   min-height: 100vh;
   background-color: #111111;
-
   padding: 60px 80px;
 }
 
@@ -9,7 +8,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
   margin-bottom: 30px;
 }
 
@@ -22,34 +20,24 @@
 
 .saved-title {
   margin: 0;
-
   color: #ffffff;
-
   font-size: 40px;
   font-weight: 700;
 }
 
 .saved-count {
   margin-top: 10px;
-
   color: #8b8b8b;
-
   font-size: 15px;
 }
 
 .back-menu-btn {
   background: transparent;
-
   color: #b8b8ff;
-
   border: 1px solid #303055;
-
   border-radius: 8px;
-
   padding: 10px 20px;
-
   cursor: pointer;
-
   transition: .3s;
 }
 
@@ -59,20 +47,15 @@
 
 .saved-recipes-list {
   list-style: none;
-
   margin: 0;
   padding: 0;
-
   display: grid;
-
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
   gap: 24px;
 }
 
 .empty-view {
   min-height: 80vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,7 +64,6 @@
 
 .empty-description {
   color: #8b8b8b;
-
   margin: 18px 0 30px;
 }
 

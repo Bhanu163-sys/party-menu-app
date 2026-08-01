@@ -4,30 +4,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px;
+  padding: 20px 10px;
 }
 
 .home-con {
   min-height: 100vh;
   background-color: #0b0b12;
   color: #ffffff;
-  padding: 30px 80px;
+  padding: 20px 63px;
 }
 
 .filters-con {
-  margin-top: 40px;
+  margin-top: 18px;
+  width: 95%;
+  background: #1a1a24;
+  border: 1px solid #2d2f46;
+  border-radius: 16px;
+  padding: 18px;
+  margin-top: 18px;
 }
 
 .category-heading,
 .diet-heading {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 500;
+  text-align: left;
   margin-bottom: 18px;
   color: #ffffff;
 }
 
 .diet-main-con {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .diets-list-con {
@@ -41,7 +48,7 @@
 }
 
 .diet-list-ele {
-  padding: 10px 24px;
+  padding: 5px 14px;
   border: 1px solid #34344a;
   border-radius: 999px;
   background-color: #17171f;
@@ -65,7 +72,21 @@
   font-weight: 600;
 }
 
-/* Tablet */
+.threeleaves-icon,
+.chickenleg-icon {
+  font-size: 16px;
+  padding-right: 3px;
+  flex-shrink: 0;
+}
+
+.threeleaves-icon {
+  color: #4caf50;
+}
+
+.chickenleg-icon {
+  color: #d2691e;
+}
+
 
 @media screen and (max-width: 768px) {
   .home-con {
@@ -87,8 +108,6 @@
   }
 }
 
-/* Mobile */
-
 @media screen and (max-width: 576px) {
   .home-con {
     padding: 16px;
@@ -97,6 +116,7 @@
   .category-heading,
   .diet-heading {
     font-size: 22px;
+    text-align: left;
   }
 
   .diets-list-con {
@@ -125,7 +145,7 @@
 }
 
 .search-input {
-  width: 350px;
+  width: 72%;
   height: 46px;
   padding: 0 16px;
   border-radius: 10px;
@@ -159,4 +179,13 @@
 
 .search-btn:hover {
   background-color: #ea580c;
+}
+
+.filteredRecipesCount {
+  width: 100%;
+  margin: 22px 0 24px;
+  color: #8b8b9c;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
 }

@@ -4,73 +4,131 @@
 
 .food-card-link {
   text-decoration: none;
+  display: block;
+  color: inherit;
 }
 
 .card-con {
-  height: 220px;
-  width: 180px;
-  overflow: hidden;
-  background-color: #1b1d29;
+  background: #1b1b29;
+  border: 1px solid #2d2f46;
   border-radius: 16px;
-  border: 1px solid #303245;
-  height: auto;
+  overflow: hidden;
+  transition: all .3s ease;
+  cursor: pointer;
+  height: 100%;
+}
+
+.card-con:hover {
+  border-color: #ff7a00;
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
 }
 
 .image-con {
   position: relative;
+  width: 100%;
 }
 
 .card-image {
   width: 100%;
-  height: 120px;
+  height: 220px;
   object-fit: cover;
+  display: block;
 }
 
 .veg-badge,
 .non-veg-badge {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  color: #ffffff;
-  font-size: 9px;
-  font-weight: 600;
+  top: 14px;
+  right: 14px;
   padding: 6px 12px;
-  border-radius: 20px;
+  border-radius: 18px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
 }
 
 .veg-badge {
-  background-color: #2e8b57;
+  background: #2e8b57;
 }
 
 .non-veg-badge {
-  background-color: #b91c1c;
+  background: #c62828;
 }
 
 .card-details {
-  padding: 5px;
   text-align: left;
+  padding: 18px;
 }
 
 .category-para {
-  color: #f97316;
-  font-size: 9px;
+  margin: 0;
+  color: #ff7a00;
+  font-size: 11px;
   font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .food-name {
+  margin: 10px 0;
   color: #ffffff;
-  font-size: 18px;
-  margin-bottom: 9px;
+  font-size: 26px;
+  font-weight: 700;
 }
 
 .food-description {
+  margin: 0;
   color: #9ca3af;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.6;
-  margin-bottom: 14px;
+  overflow: hidden;
 }
 
 .servings {
-  color: #9ca3af;
-  font-size: 12px;
+  margin-top: 18px;
+  color: #d1d5db;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (max-width:992px){
+
+.card-image{
+    height:200px;
+}
+
+.food-name{
+    font-size:22px;
+}
+
+}
+
+@media screen and (max-width:768px){
+
+.card-image{
+    height:190px;
+}
+
+.card-details{
+    padding:16px;
+}
+
+.food-name{
+    font-size:20px;
+}
+
+.food-description{
+    font-size:14px;
+}
+
+.category-para{
+    font-size:10px;
+}
+
+.servings{
+    font-size:13px;
+}
+
 }

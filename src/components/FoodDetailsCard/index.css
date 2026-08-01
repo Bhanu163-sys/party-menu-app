@@ -54,6 +54,7 @@
   gap: 16px;
 }
 
+
 .saved-recipes-btn {
   padding: 11px 22px;
   border-radius: 10px;
@@ -68,23 +69,29 @@
   background: #1f1f2e;
 }
 
-.toggle-save-btn {
-  padding: 11px 22px;
-  border-radius: 10px;
-  border: none;
-  background: #f97316;
+.save-btn {
+  background-color: #ff7a00;
   color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: .3s;
+  transition: all 0.3s ease;
 }
 
-.toggle-save-btn:hover {
-  background: #ea580c;
+.save-btn:hover {
+  background-color: #e56f00;
 }
 
-/* Image & Details */
+.saved-btn {
+  background-color: #16a34a;
+}
 
+.saved-btn:hover {
+  background-color: #15803d;
+}
 .image-description-para {
   display: flex;
   gap: 40px;
@@ -147,8 +154,6 @@
   max-width: 500px;
 }
 
-/* Ingredients */
-
 .ingredients-con {
   background: #1b1b28;
   border: 1px solid #2c2c3c;
@@ -191,7 +196,6 @@
   color: #9ca3af;
 }
 
-/* Tablet */
 
 @media screen and (max-width: 992px) {
   .image-description-para {
@@ -248,3 +252,4 @@
     font-size: 24px;
   }
 }
+

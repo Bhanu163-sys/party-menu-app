@@ -7,6 +7,8 @@ import FoodItemGrid from '../FoodItemGrid'
 
 import { useAuth } from '../../context/AuthContext'
 import menuData from '../../data/menuData'
+import { GiThreeLeaves } from "react-icons/gi";
+import { GiChickenLeg } from "react-icons/gi";
 
 import './index.css'
 
@@ -15,7 +17,7 @@ const categoryList = [
   'Starter',
   'Main',
   'Sides',
-  'Dessert',
+  'Desert',
 ]
 
 const dietList = [
@@ -85,6 +87,8 @@ const Home = () => {
                 }`}
                 onClick={() => setActiveDiet(diet)}
               >
+                {diet === 'Veg' && <GiThreeLeaves className='threeleaves-icon' />}
+                {diet === 'Non-Veg' && <GiChickenLeg className='chickenleg-icon' />}
                 {diet}
               </li>
             ))}
@@ -108,6 +112,9 @@ const Home = () => {
             Search
           </button>
         </div>
+      </div>
+      <div className='filteredRecipesCount'>
+        {filteredRecipes.length} items found
       </div>
       <FoodItemGrid className="food-item-grid" filteredRecipes={filteredRecipes} />
     </div>

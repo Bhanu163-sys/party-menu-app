@@ -25,7 +25,7 @@ const FoodDetailsCard = () => {
         <li className="list-details-item">
             <div className="food-details-header-con">
                 <Link className="details-link-item" to="/">
-                    <button type="button" className="back-btn" onClick={() => navigate(-1)}>
+                    <button type="button" className="back-btn">
                         <FaLongArrowAltLeft className="arrow-icon" /> 
                         <span className="back-btn-para">Back to Menu</span>
                     </button>
@@ -38,7 +38,7 @@ const FoodDetailsCard = () => {
                     </Link>
                     <button
                       type="button"
-                      className="toggle-save-btn"
+                      className={`save-btn ${isRecipeSaved(foodDetails.id) ? 'saved-btn' : ''}`}
                       onClick={() => toggleSaveRecipe(foodDetails)}
                       >
                       {isRecipeSaved(foodDetails.id)
